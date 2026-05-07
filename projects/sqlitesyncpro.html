@@ -97,12 +97,105 @@
 
       <section class="content-block accent-block">
         <div class="section-heading">
+          <p class="eyebrow">Cross-Platform Sync</p>
+          <h2>From local database to shared project data</h2>
+        </div>
+        <p class="wide-copy showcase-intro">
+          Sqlite Sync Pro supports the synchronization layer behind Project Notes, where local
+          SQLite data can stay fast on each device while selected records move through a remote
+          PostgreSQL/PostgREST host. These screens show the practical surfaces around that flow:
+          host setup, user access, client settings, live sync stats, and cross-platform app use.
+        </p>
+
+        <div class="feature-showcase">
+          <figure class="screenshot-card screenshot-card-large">
+            <div class="screenshot-frame desktop-frame">
+              <img src="/images/pn-screenshots/pn-sync-stats-windows.png" alt="Sync network statistics on Windows showing upload and download activity by table.">
+            </div>
+            <figcaption>
+              <strong>Bidirectional sync visibility</strong>
+              <span>
+                Upload and download activity is visible by cycle and by table, giving desktop
+                applications a way to monitor what moved between local SQLite and the shared host.
+              </span>
+            </figcaption>
+          </figure>
+
+          <div class="feature-stack">
+            <figure class="screenshot-card">
+              <div class="screenshot-frame desktop-frame">
+                <img src="/images/pn-screenshots/pn-remote-host-user-setup.png" alt="Remote host user setup showing PostgreSQL sync users.">
+              </div>
+              <figcaption>
+                <strong>Remote user provisioning</strong>
+                <span>Sync users map to PostgreSQL roles so access can be managed outside the local app.</span>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card">
+              <div class="screenshot-frame desktop-frame dark-frame">
+                <img src="/images/pn-screenshots/pn-sync-settings-dark-mode-linux.png" alt="Project Notes sync settings on Linux for a self-hosted PostgREST server.">
+              </div>
+              <figcaption>
+                <strong>Client-side sync settings</strong>
+                <span>Each client can enable cloud sync, choose a host type, authenticate, and set an encryption phrase.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="screenshot-grid" aria-label="SQLite Sync Pro cross-platform screenshots">
+          <figure class="screenshot-card">
+            <div class="screenshot-frame desktop-frame">
+              <img src="/images/pn-screenshots/pn-remote-host-server-setup.png" alt="Remote host setup showing PostgreSQL and Supabase connection fields.">
+            </div>
+            <figcaption>
+              <strong>Host configuration</strong>
+              <span>Self-hosted and Supabase-style PostgreSQL targets can be configured through a guided setup flow.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot-card">
+            <div class="screenshot-frame desktop-frame dark-frame">
+              <img src="/images/pn-screenshots/pn-project-list-dark-mode-linux.png" alt="Project Notes running on Linux in dark mode with project records.">
+            </div>
+            <figcaption>
+              <strong>Linux desktop client</strong>
+              <span>The same project data can be used from a native desktop interface in dark mode.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot-card">
+            <div class="screenshot-frame desktop-frame">
+              <img src="/images/pn-screenshots/pn-project-list-light-mode-macos.png" alt="Project Notes running on macOS with project list data.">
+            </div>
+            <figcaption>
+              <strong>macOS project workspace</strong>
+              <span>Local-first records remain available in the full desktop project management experience.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot-card">
+            <div class="screenshot-frame phone-frame">
+              <img src="/images/pn-screenshots/pn-project-list-dark-mode-ios.png" alt="Project Notes project list on iOS in dark mode.">
+            </div>
+            <figcaption>
+              <strong>iOS mobility path</strong>
+              <span>Mobile clients can participate in the same product data model for field and meeting workflows.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-block accent-block">
+        <div class="section-heading">
           <p class="eyebrow">Capabilities</p>
           <h2>Core design themes</h2>
         </div>
         <div class="pill-grid">
           <span class="pill">Bidirectional synchronization</span>
           <span class="pill">Background worker thread model</span>
+          <span class="pill">Cross-platform desktop and mobile clients</span>
           <span class="pill">JWT-based authentication support</span>
           <span class="pill">Optional row encryption</span>
           <span class="pill">Schema inspection and JSON row transport</span>
