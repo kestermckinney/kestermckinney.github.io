@@ -4,29 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page Not Found | Paul McKinney</title>
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="site-shell project-page">
-    <main>
-      <section class="hero compact-hero">
-        <div class="hero-copy">
-          <div class="check-circle" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polyline points="6,17 13,24 26,9" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <p class="eyebrow">404</p>
-          <h1>That page is not here.</h1>
-          <p class="lead">
-            The link may have changed, or the page may not be published yet.
-          </p>
-          <div class="actions">
-            <a class="button button-primary" href="/">Return Home</a>
-          </div>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="14" width="44" height="46" rx="4" fill="rgba(0,0,0,0.06)" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>
+          <rect x="22" y="8" width="20" height="12" rx="3" fill="rgba(0,0,0,0.1)" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+          <line x1="18" y1="30" x2="46" y2="30" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="38" x2="46" y2="38" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="46" x2="36" y2="46" stroke="rgba(0,0,0,0.25)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>
+        <strong>Paul McKinney</strong>
+        <small>Digital Solutions</small>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 6rem;">
+      <p class="eyebrow" style="margin-bottom: 0.8rem;">404</p>
+      <h1>That page is not here.</h1>
+      <p class="lead">
+        The link may have changed, or the page may not be published yet.
+      </p>
+      <div class="actions">
+        <a class="button button-primary" href="/">Return Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-legal" style="border-top: none; padding-top: 0;">
+        <p>Built as a static GitHub Pages site.</p>
+        <div class="footer-legal-links">
+          <a href="https://github.com/kestermckinney/kestermckinney.github.io">Source</a>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
