@@ -126,7 +126,8 @@ h3 {
   justify-content: center;
 }
 
-.brand-mark svg {
+.brand-mark svg,
+.brand-mark img {
   width: 32px;
   height: 32px;
 }
@@ -310,6 +311,13 @@ h3 {
 
 .projectnotes-mark {
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.project-logo {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-bottom: 0.8rem;
+  object-fit: contain;
 }
 
 .sync-mark {
