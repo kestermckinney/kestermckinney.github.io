@@ -1,0 +1,16 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Paul McKinney logo</title>
+  <desc id="desc">A PM monogram with an upward project path on a blue field.</desc>
+  <rect width="256" height="256" rx="56" fill="url(#mark-bg)"/>
+  <path d="M76 190V62" stroke="#F8FBFF" stroke-width="22" stroke-linecap="round"/>
+  <path d="M76 64H132C165 64 184 82 184 108C184 134 165 152 130 152H76" stroke="#F8FBFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 190L112 150L143 190L184 132" stroke="#72F0B0" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="184" cy="132" r="8" fill="#72F0B0"/>
+  <defs>
+    <linearGradient id="mark-bg" x1="44" y1="26" x2="226" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="0.58" stop-color="#0969DA"/>
+      <stop offset="1" stop-color="#18A999"/>
+    </linearGradient>
+  </defs>
+</svg>
