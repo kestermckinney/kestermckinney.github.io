@@ -1,6 +1,6 @@
-# kestermckinney.github.io
+# kestermckinney.gitlab.io
 
-Static GitHub Pages site for Paul McKinney and the featured projects:
+Static GitLab Pages site for Paul McKinney and the featured projects:
 
 - [ProjectNotes](https://github.com/kestermckinney/ProjectNotes)
 - [SqliteSyncPro](https://github.com/kestermckinney/SqliteSyncPro)
@@ -15,14 +15,13 @@ Static GitHub Pages site for Paul McKinney and the featured projects:
 
 ## Publishing
 
-This site does not require Jekyll, npm, Ruby, or any GitHub Marketplace add-on.
+This site does not require Jekyll, npm, or Ruby. GitLab CI copies the static site into the `public` artifact and publishes it with GitLab Pages.
 
-To publish on GitHub Pages:
+To publish on GitLab Pages:
 
-1. Push this repository to `main`.
-2. In GitHub, open `Settings > Pages`.
-3. Set the source to `Deploy from a branch`.
-4. Choose `main` and the `/ (root)` folder.
+1. Push this repository to the `main` branch of the `kestermckinney/kestermckinney.gitlab.io` GitLab project.
+2. GitLab runs the `pages` job defined in `.gitlab-ci.yml`.
+3. After the pipeline succeeds, the site is available at <https://kestermckinney.gitlab.io/>.
 
 ## Optional Next Steps
 
