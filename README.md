@@ -2,14 +2,17 @@
 
 Static GitLab Pages site for Paul McKinney and the featured projects:
 
-- [ProjectNotes](https://github.com/kestermckinney/ProjectNotes)
-- [SqliteSyncPro](https://github.com/kestermckinney/SqliteSyncPro)
+- [ProjectNotes](https://gitlab.com/kestermckinney/ProjectNotes)
+- [SqliteSyncPro](https://gitlab.com/kestermckinney/SqliteSyncPro)
+- [ScheduleIO](https://gitlab.com/kestermckinney/ScheduleIO)
 
 ## Structure
 
 - `index.html` - personal and professional landing page
 - `projects/projectnotes.html` - ProjectNotes product page
 - `projects/sqlitesyncpro.html` - SqliteSyncPro library page
+- `images/scheduleio-logo.svg` - ScheduleIO project icon
+- `images/scheduleio-avatar.png` - ScheduleIO GitLab project avatar
 - `styles.css` - shared site styling
 - `404.html` - fallback page
 
@@ -27,5 +30,5 @@ To publish on GitLab Pages:
 
 - Add a custom domain with a `CNAME` file if you want your own URL.
 - Add an Open Graph social preview image for cleaner sharing.
-- Add a GitHub Actions workflow only if you later want build steps or validation.
-- Create a separate `kestermckinney` repository with a profile `README.md` if you also want a custom profile on `github.com/kestermckinney`.
+- Extend the existing GitLab CI pipeline if you later want build steps or validation.
+- Create a separate `kestermckinney` repository with a profile `README.md` if you also want a custom profile on `gitlab.com/kestermckinney`.
