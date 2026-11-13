@@ -823,3 +823,66 @@ h3 {
     width: 100%;
   }
 }
+
+/* Home page: visual language shared with the Project Notes site. */
+@font-face { font-family: Inter; src: url('/fonts/pn-font-0.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Inter; src: url('/fonts/pn-font-1.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: Inter; src: url('/fonts/pn-font-2.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter Tight'; src: url('/fonts/pn-font-5.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+.home-page {
+  --bg: #f6f8fb; --bg-section: #fff; --ink: #0f1b2d; --muted: #4a5a70;
+  --soft: #3b4a5e; --line: #dce3ec; --accent: #1d4c9c; --accent-hover: #143a78;
+  --accent-light: #e4ecfb; --max: 1200px;
+  font-family: Inter, sans-serif;
+}
+.home-page .site-header { padding: 1rem 1.5rem; }
+.home-page .site-nav a { color: var(--soft); font-weight: 500; }
+.home-page .hero { text-align: left; padding: 6rem 1.5rem 7rem; }
+.home-page .hero h1 { max-width: 13ch; margin: 1.5rem 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(3.4rem, 7vw, 5.5rem); line-height: 1.02; letter-spacing: -.04em; }
+.home-page .hero .eyebrow { display: inline-block; padding: .5rem .9rem; border-radius: 999px; color: #173b7a; background: #e4ecfb; font-size: .8rem; font-weight: 600; }
+.home-page .hero .lead { margin: 0 0 2rem; max-width: 650px; color: #3b4a5e; font-size: 1.2rem; }
+.home-page .hero .actions { justify-content: flex-start; }
+.home-page .button { min-height: 52px; padding: 0 1.5rem; border-radius: 12px; font-weight: 600; gap: .6rem; }
+.home-page .button-secondary { background: white; border: 1px solid #c5cfdb; color: var(--ink); }
+.home-page .section { padding: 6rem 1.5rem; }
+.home-page .section-alt { border-block: 1px solid #e3e9f1; }
+.home-page h2 { font-family: 'Inter Tight', sans-serif; font-size: clamp(2.3rem, 4vw, 3.2rem); line-height: 1.08; letter-spacing: -.03em; }
+.home-page .eyebrow { color: var(--accent); font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.home-page .project-card, .home-page .approach-card, .home-page .contact-card { border-radius: 18px; border-color: #e3e9f1; }
+.home-page .project-card { padding: 2rem; }
+.home-page .pill { background: #eef2f7; border-color: #e3e9f1; }
+.accent-word { color: #1d4c9c; }
+.wm { display: inline-block; overflow: clip; vertical-align: top; padding: 0 .05em .14em 0; margin-bottom: -.14em; }
+.w { display: inline-block; }
+.seemymac-section { background: #fff; border-block: 1px solid #e3e9f1; }
+.seemymac-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(3rem, 7vw, 6rem); align-items: center; }
+.seemymac-copy h2 { margin: .8rem 0 1.5rem; }
+.seemymac-copy p { color: #3b4a5e; }
+.seemymac-copy .button { margin-top: .5rem; }
+.screenshot-stack { position: relative; padding: 0 2.5rem 3.5rem 0; }
+.screenshot-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #4a5a70; background: #f1f4f9; border: 1px solid #d5dde8; border-radius: 16px; box-shadow: 0 18px 45px rgba(15,27,45,.1); }
+.screenshot-placeholder strong { color: #334155; font-size: .95rem; }
+.screenshot-placeholder small { margin-top: .35rem; font-size: .8rem; }
+.screenshot-main { position: relative; aspect-ratio: 16 / 10; }
+.screenshot-detail { position: absolute; right: 0; bottom: 0; width: 42%; aspect-ratio: 4 / 3; background: #fff; }
+.placeholder-icon { color: #8fa4c2; font-size: 2rem; line-height: 1; margin-bottom: .7rem; }
+.window-dots { position: absolute; top: 1rem; left: 1rem; display: flex; gap: .35rem; }
+.window-dots i { width: .5rem; height: .5rem; border-radius: 50%; background: #c5cfdb; }
+@keyframes home-wordup { from { transform: translateY(112%) rotate(7deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes home-fadeup { from { transform: translateY(30px); opacity: 0; filter: blur(4px); } to { transform: none; opacity: 1; filter: blur(0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-words .w { animation: home-wordup 1s cubic-bezier(.2,.8,.2,1) both; }
+  .hero-words .wm:nth-child(1) .w { animation-delay: .2s; }
+  .hero-words .wm:nth-child(2) .w { animation-delay: .34s; }
+  .hero-words .wm:nth-child(3) .w { animation-delay: .48s; }
+  .hero-words .wm:nth-child(4) .w { animation-delay: .62s; }
+  .hero-words .wm:nth-child(5) .w { animation-delay: .76s; }
+  .motion-heading { opacity: 0; }
+  .motion-heading.is-visible { animation: home-fadeup .8s cubic-bezier(.2,.7,.2,1) both; }
+}
+@media (max-width: 760px) {
+  .home-page .hero { padding: 4rem 1.5rem 5rem; }
+  .home-page .section { padding: 4rem 1.5rem; }
+  .seemymac-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
