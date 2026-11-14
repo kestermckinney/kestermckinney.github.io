@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="home-page project-page">
   <header class="site-header">
     <a class="brand" href="/">
       <span class="brand-mark" aria-hidden="true">
@@ -47,7 +47,7 @@
   <main>
     <section class="project-hero">
       <p class="eyebrow" style="margin-bottom: 0.6rem;">Featured Project</p>
-      <h1>Project Notes</h1>
+      <h1 class="hero-words"><span class="wm"><span class="w">Project</span></span> <span class="wm"><span class="w accent-word">Notes.</span></span></h1>
       <p class="lead">
         Project Notes is a purpose-built workspace for project managers who need one place for
         notes, action items, project health, status reporting, and follow-up tasks across
@@ -55,7 +55,8 @@
       </p>
       <div class="actions">
         <a class="button button-primary" href="https://gitlab.com/kestermckinney/ProjectNotes">View on GitLab</a>
-        <a class="button button-secondary" href="/">Back to Home</a>
+        <a class="button button-secondary" href="https://projectnotespro.com/">Visit Project Notes Pro</a>
+        <a class="button button-secondary" href="https://gitlab.com/kestermckinney/ProjectNotes/-/releases">Release notes</a>
       </div>
     </section>
 
@@ -80,14 +81,13 @@
           </div>
           <div>
             <p>
-              The application also emphasizes automation. Python-based extensions let the platform
-              integrate with external systems and automate repeatable project tasks such as exporting
-              notes, generating reports, creating meeting artifacts, and connecting with enterprise
-              tools.
+              JavaScript plugins run inside Project Notes to automate repeatable work and connect
+              with external systems. Plugins run in isolated engines, and permissions are reviewed
+              when a package is installed.
             </p>
             <p>
-              A shared core library and mobile work indicate the product is evolving beyond a single
-              desktop workflow into a broader project operations platform.
+              A shared core supports desktop and mobile workflows. Project folders can also be
+              linked to Microsoft Teams, so reports and other project files can be saved there.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@
         </div>
         <p class="wide-copy showcase-intro reveal">
           Project Notes Pro connects meeting notes, action items, files, integrations, and mobile
-          access in one workspace. The screenshots below show the current application experience.
+          access in one workspace. The screenshots below offer a look at its workflows; some screens may differ from the latest release.
         </p>
         <div class="screenshot-gallery" aria-label="Project Notes Pro feature screenshots">
           <div class="gallery-item-wrapper reveal reveal-delay-1" data-lightbox-src="/images/pn-screenshots-new/pn-item-list-lightmode.png" data-lightbox-caption="Action item tracking: Keep owners, statuses, and due dates visible in one working view.">
@@ -123,9 +123,6 @@
           <div class="gallery-item-wrapper reveal reveal-delay-2" data-lightbox-src="/images/pn-screenshots-new/pn-search-darkmode.png" data-lightbox-caption="Search and filter: Find notes, action items, and files across the project database.">
             <figure class="screenshot-card"><div class="screenshot-frame desktop-frame"><img src="/images/pn-screenshots-new/pn-search-darkmode.png" alt="Project Notes Pro search showing full-text search results across notes, action items, and file records."></div><figcaption><strong>Search and filter</strong><span>Find notes, action items, and files across the project database.</span></figcaption></figure>
           </div>
-          <div class="gallery-item-wrapper reveal reveal-delay-3" data-lightbox-src="/images/pn-screenshots-new/pn-plugin-editing.png" data-lightbox-caption="Integrations and scripting: Customize workflows with embedded Python plugins.">
-            <figure class="screenshot-card"><div class="screenshot-frame desktop-frame"><img src="/images/pn-screenshots-new/pn-plugin-editing.png" alt="Project Notes Pro plugin editor showing Python plugin code alongside the project tracker."></div><figcaption><strong>Integrations and scripting</strong><span>Customize workflows with embedded Python plugins.</span></figcaption></figure>
-          </div>
           <div class="gallery-item-wrapper reveal reveal-delay-4" data-lightbox-src="/images/pn-screenshots-new/pn-mobile-lightmode.png" data-lightbox-caption="Mobile access: Carry synced project notes and action items wherever work happens.">
             <figure class="screenshot-card"><div class="screenshot-frame phone-frame"><img src="/images/pn-screenshots-new/pn-mobile-lightmode.png" alt="Project Notes Pro mobile app showing notes and action items synced from the cloud."></div><figcaption><strong>Mobile access</strong><span>Carry synced project notes and action items wherever work happens.</span></figcaption></figure>
           </div>
@@ -145,10 +142,11 @@
           <span class="pill">Risks, issues, change requests, and work items</span>
           <span class="pill">Email and meeting workflow support</span>
           <span class="pill">PDF and Excel-oriented reporting outputs</span>
-          <span class="pill">Plugin framework for customization</span>
+          <span class="pill">JavaScript plugins for customization</span>
+          <span class="pill">Microsoft Teams project folders</span>
           <span class="pill">Shared desktop and mobile data model</span>
           <span class="pill">Cross-platform light and dark mode support</span>
-          <span class="pill">Cloud sync direction through SqliteSyncPro</span>
+          <span class="pill">Cloud sync with Sqlite Sync Pro</span>
         </div>
       </div>
     </section>
@@ -178,8 +176,8 @@
           <article class="project-card reveal reveal-delay-3">
             <h3>Extensibility</h3>
             <p>
-              Python plugins and background worker scripts make it possible to adapt the system to
-              organization-specific workflows and integrations without reshaping the entire product.
+              JavaScript plugins run in isolated engines and let teams adapt workflows and
+              integrations. Python is no longer required or bundled.
             </p>
           </article>
         </div>
@@ -214,6 +212,7 @@
         </div>
         <div class="footer-col">
           <h4>Projects</h4>
+          <a href="/projects/seemymac.html">SeeMyMac</a>
           <a href="/projects/projectnotes.html">Project Notes</a>
           <a href="/projects/sqlitesyncpro.html">Sqlite Sync Pro</a>
           <a href="https://gitlab.com/kestermckinney">GitLab Profile</a>
@@ -301,6 +300,7 @@
       }
 
       function initReveal() {
+        if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible')); return; }
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {

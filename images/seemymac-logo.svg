@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>SeeMac</title>
+  <desc>Two connected screens in navy, warm white and sea green.</desc>
+  <rect width="256" height="256" rx="54" fill="#293f6e"/>
+  <rect x="29" y="40" width="150" height="108" rx="15" fill="none" stroke="#f3f1e8" stroke-width="11" opacity=".65"/>
+  <path d="M78 151v13m-20 0h40" fill="none" stroke="#f3f1e8" stroke-width="10" stroke-linecap="round" opacity=".65"/>
+  <rect x="68" y="84" width="160" height="116" rx="16" fill="#f3f1e8"/>
+  <rect x="80" y="96" width="136" height="78" rx="5" fill="#88c4ba"/>
+  <path d="M124 149l45-31m-22-2l24 1-2 24" fill="none" stroke="#293f6e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M147 200v16m-27 0h54" fill="none" stroke="#f3f1e8" stroke-width="11" stroke-linecap="round"/>
+</svg>

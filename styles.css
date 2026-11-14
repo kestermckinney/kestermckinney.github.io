@@ -886,3 +886,21 @@ h3 {
   .seemymac-layout { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Project pages share the home page's typography, color, and motion. */
+.project-page .project-hero { text-align: left; padding: 5.5rem 1.5rem 6rem; }
+.project-page .project-hero h1 { font-family: 'Inter Tight', sans-serif; font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 1.03; letter-spacing: -.04em; margin: 1rem 0 1.5rem; }
+.project-page .project-hero .lead { margin: 0 0 2rem; max-width: 700px; color: #3b4a5e; font-size: 1.2rem; }
+.project-page .project-hero .actions { justify-content: flex-start; }
+.project-page .section-heading { margin-bottom: 2.5rem; }
+.project-page .screenshot-card { border-radius: 18px; border-color: #e3e9f1; }
+.project-page .seemymac-layout h2 { margin: .8rem 0 1.5rem; }
+.placeholder-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.social-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2rem; }
+.social-links a { display: inline-flex; color: var(--soft); transition: color .2s; }
+.social-links a:hover, .social-links a:focus-visible { color: var(--ink); }
+.social-links svg { width: 20px; height: 20px; }
+.site-nav { flex-wrap: wrap; }
+@media (max-width: 760px) { .project-page .project-hero { padding: 4rem 1.5rem; } .placeholder-grid { grid-template-columns: 1fr; } }
+
+.seemymac-screenshot { display: block; width: 100%; height: auto; background: #f1f4f9; border: 1px solid #d5dde8; border-radius: 16px; box-shadow: 0 18px 45px rgba(15,27,45,.1); }

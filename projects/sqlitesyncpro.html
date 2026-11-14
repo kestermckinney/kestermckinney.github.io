@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body class="home-page project-page">
   <header class="site-header">
     <a class="brand" href="/">
       <span class="brand-mark" aria-hidden="true">
@@ -47,7 +47,7 @@
   <main>
     <section class="project-hero">
       <p class="eyebrow" style="margin-bottom: 0.6rem;">Featured Project</p>
-      <h1>Sqlite Sync Pro</h1>
+      <h1 class="hero-words"><span class="wm"><span class="w">Sqlite</span></span> <span class="wm"><span class="w">Sync</span></span> <span class="wm"><span class="w accent-word">Pro.</span></span></h1>
       <p class="lead">
         Sqlite Sync Pro is a synchronization library for applications that need local SQLite
         performance with remote PostgreSQL alignment, making offline-first desktop and mobile
@@ -119,9 +119,6 @@
           </div>
           <div class="gallery-item-wrapper reveal reveal-delay-1" data-lightbox-src="/images/pn-screenshots-new/pn-search-darkmode.png" data-lightbox-caption="Cross-device search: Find synchronized notes, items, and file records from one query surface.">
             <figure class="screenshot-card"><div class="screenshot-frame desktop-frame"><img src="/images/pn-screenshots-new/pn-search-darkmode.png" alt="Project Notes Pro dark-mode search across synchronized notes, action items, and file records."></div><figcaption><strong>Cross-device search</strong><span>Find synchronized notes, items, and file records from one query surface.</span></figcaption></figure>
-          </div>
-          <div class="gallery-item-wrapper reveal reveal-delay-2" data-lightbox-src="/images/pn-screenshots-new/pn-plugin-editing.png" data-lightbox-caption="Integration surface: Plugins can connect synchronized project data to business workflows.">
-            <figure class="screenshot-card"><div class="screenshot-frame desktop-frame"><img src="/images/pn-screenshots-new/pn-plugin-editing.png" alt="Project Notes Pro plugin editor showing Python integration code alongside the project tracker."></div><figcaption><strong>Integration surface</strong><span>Plugins can connect synchronized project data to business workflows.</span></figcaption></figure>
           </div>
           <div class="gallery-item-wrapper reveal reveal-delay-3" data-lightbox-src="/images/pn-screenshots-new/pn-send-notes-macos-lightmode.png" data-lightbox-caption="Shared communication: Synchronized meeting records can support follow-up messages from the desktop client.">
             <figure class="screenshot-card"><div class="screenshot-frame desktop-frame"><img src="/images/pn-screenshots-new/pn-send-notes-macos-lightmode.png" alt="Project Notes Pro send meeting notes plugin using synchronized meeting data."></div><figcaption><strong>Shared communication</strong><span>Synchronized meeting records can support follow-up messages from the desktop client.</span></figcaption></figure>
@@ -214,6 +211,7 @@
         </div>
         <div class="footer-col">
           <h4>Projects</h4>
+          <a href="/projects/seemymac.html">SeeMyMac</a>
           <a href="/projects/projectnotes.html">Project Notes</a>
           <a href="/projects/sqlitesyncpro.html">Sqlite Sync Pro</a>
           <a href="https://gitlab.com/kestermckinney">GitLab Profile</a>
@@ -301,6 +299,7 @@
       }
 
       function initReveal() {
+        if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible')); return; }
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {

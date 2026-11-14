@@ -4,12 +4,13 @@ Static GitLab Pages site for Paul McKinney and the featured projects:
 
 - [ProjectNotes](https://gitlab.com/kestermckinney/ProjectNotes)
 - [SqliteSyncPro](https://gitlab.com/kestermckinney/SqliteSyncPro)
-- [SeeMyMac](https://gitlab.com/kestermckinney/SeeMac) (in development)
+- [SeeMyMac](https://gitlab.com/kestermckinney/SeeMyMac) (in development)
 - [ScheduleIO](https://gitlab.com/kestermckinney/ScheduleIO)
 
 ## Structure
 
 - `index.html` - personal and professional landing page
+- `projects/seemymac.html` - SeeMyMac project page
 - `projects/projectnotes.html` - ProjectNotes product page
 - `projects/sqlitesyncpro.html` - SqliteSyncPro library page
 - `images/scheduleio-logo.svg` - ScheduleIO project icon
