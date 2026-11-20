@@ -14,7 +14,7 @@ Then visit `http://localhost:8080`. Serving from a local server (rather than `fi
 
 ## Publishing
 
-Push to `main` on the `gitlab` remote. GitLab CI publishes the static site using the `pages` job in `.gitlab-ci.yml`.
+Push to `main` on the GitHub repository. GitHub Pages publishes the static site from the root of that branch.
 
 ## Architecture
 
